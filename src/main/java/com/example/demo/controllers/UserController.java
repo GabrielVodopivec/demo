@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.dto.response.UsersResponse;
+import com.example.demo.dto.user.UserDto;
 import com.example.demo.entities.User;
 import com.example.demo.services.IService;
 import org.springframework.http.HttpStatus;
@@ -13,10 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/users")
 public class UserController {
 
-    private final IService<User> userService;
+    private final IService<UserDto> userService;
 
-    public UserController(IService<User> userService) {
+    public UserController(IService<UserDto> userService) {
         this.userService = userService;
+
     }
 
     @GetMapping("/all")
