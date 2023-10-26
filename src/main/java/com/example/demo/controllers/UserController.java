@@ -2,7 +2,6 @@ package com.example.demo.controllers;
 
 import com.example.demo.dto.response.UsersResponse;
 import com.example.demo.dto.user.UserDto;
-import com.example.demo.entities.User;
 import com.example.demo.services.IService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,5 +26,10 @@ public class UserController {
         response.setMessage("Solicitud procesada con éxito");
         response.setResult(userService.findAll());
         return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    @GetMapping("/nada")
+    public ResponseEntity<?> hola() {
+        return null;
     }
 }
