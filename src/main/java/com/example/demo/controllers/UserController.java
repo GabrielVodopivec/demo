@@ -18,7 +18,6 @@ public class UserController {
 
     public UserController(IService<UserDto> userService) {
         this.userService = userService;
-
     }
 
     @GetMapping("/all")

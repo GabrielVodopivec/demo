@@ -1,14 +1,11 @@
 package com.example.demo.dto.response;
 
-import com.example.demo.entities.User;
-
 import java.util.List;
 
 public class UsersResponse {
     private int status;
     private String message;
     private List<?> result;
-
 
     public int getStatus() {
         return status;
